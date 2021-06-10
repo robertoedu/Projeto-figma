@@ -35,26 +35,26 @@
         </div>
     </div>
     <div class="hero" >
-        <div>
-            <p>Tipo de transação</p>
-            <select name="escolha" id="primeiro_botao">
-                <option value="compra">Compra</option>
-                <option value="venda">Venda</option>
-            </select>
-        </div>
-        <div>
-            <p>Nome da Mercadoria</p>
-            <input type="text" placeholder="Input" >
-        </div>
-        <div>
-            <p>Valor</p>
-            <input type="number" placeholder="R$ 0,00" min="0,00"/>
-        </div>
-        <div>    
-            <BUtton> Adicionar transação </BUtton>
-        </div>
+        <form class="transacao" >
+                <label for="tipo" class="tt" >Tipo de transação</label>
+                <select name="escolha" id="primeiro_botao">
+                    <option value="compra">Compra</option>
+                    <option value="venda">Venda</option>
+                </select>
+            <div>
+                <label for="nome_m" class="NM">Nome da Mercadoria</label>
+                <input type="text" placeholder="Input" class="mercadoria" >
+            </div>
+            <div>
+                <label for="valor-m" class="value" >Valor</label>
+                <input type="number" placeholder="R$ 0,00" min="0,00" class="VM"/>
+            </div>
+            <div>    
+                <button class="adicionar" > Adicionar transação </button>
+            </div>
+        </form>
         <hr width="92.2%" >
-        <div>
+        <div class="extract" >
             Extrato de transações
         </div>
         <div>

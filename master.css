@@ -18,6 +18,7 @@ body{
     color: #333;
 
 }
+
 .menu div {
     width: 33px;
     height: 4px;
@@ -63,4 +64,61 @@ body{
 
 .aba:hover ul{
     display: block;
+}
+
+.hero {
+    font-size: 14px;
+
+}
+
+.transacao {
+    display: flexbox;
+    padding: 20px;
+}
+
+#primeiro_botao {
+    width: 98.40%;
+    border-radius: 4px;
+    color: #888;
+    margin-top: 7px;
+    height: 28px;
+    border: 1px solid #979797;
+}
+
+.NM {
+    display: flex;
+    margin-top: 20px;
+}
+
+.mercadoria {
+    width: 97%;
+    border-radius: 4px;
+    color: #888;
+    margin-top: 7px;
+    height: 25px;
+    border: 1px solid #979797;
+}
+
+.value {
+    position: absolute;
+    margin-top: 20.74px;
+}
+
+.VM {
+    width: 97%;
+    border-radius: 4px;
+    color: #888;
+    margin-top: 43px;
+    height: 25px;
+    border: 1px solid #979797;
+}
+
+.adicionar{
+        width: 98.40%;
+        border-radius: 4px;
+        color: #FFFF;
+        margin-top: 43px;
+        height: 28px;
+        border: 1px solid #979797;
+        background-color: #333;
 }
