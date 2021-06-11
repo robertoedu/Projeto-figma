@@ -34,62 +34,56 @@
         </div>
         </div>
     </div>
-    <div class="hero" >
-        <form class="transacao" >
-                <label for="tipo" class="tt" >Tipo de transação</label>
-                <select name="escolha" id="primeiro_botao">
-                    <option value="compra">Compra</option>
-                    <option value="venda">Venda</option>
-                </select>
-            <div>
-                <label for="nome_m" class="NM">Nome da Mercadoria</label>
-                <input type="text" placeholder="Input" class="mercadoria" >
+        <div class="hero" >
+            <form class="transacao" >
+                    <label for="tipo" class="tt" >Tipo de transação</label>
+                    <select name="escolha" id="primeiro_botao">
+                        <option value="compra">Compra</option>
+                        <option value="venda">Venda</option>
+                    </select>
+                <div>
+                    <label for="nome_m" class="NM">Nome da Mercadoria</label>
+                    <input type="text" placeholder="Input" class="mercadoria" >
+                </div>
+                <div>
+                    <label for="valor-m" class="value" >Valor</label>
+                    <input type="number" placeholder="R$ 0,00" min="0,00" class="VM"/>
+                </div>
+                <div>    
+                    <button class="adicionar" > Adicionar transação </button>
+                </div>
+            </form>
+            <hr width="92.2%" >
+            <div class="extract" >
+                <p>Extrato de transações</p>
             </div>
-            <div>
-                <label for="valor-m" class="value" >Valor</label>
-                <input type="number" placeholder="R$ 0,00" min="0,00" class="VM"/>
+            <div class="tabela" >
+                <table >
+                    <thead>
+                        <th class="topo" >Mercadoria</th>
+                        <th class="topo" >Valor</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>+Lorem ipsum dolor sit amet consectur</th>
+                            <th> R$ 12.999,99</th>
+                        </tr>
+                        <tr>
+                            <th>- Quis nostrud exercitation</th>
+                            <th>R$ 99,99</th>
+                        </tr>                
+                        <tr>
+                            <th>+ Lorem impsum</th>
+                            <th>R$ 9,99</th>
+                        </tr>
+                        <tr>
+                            <th class="fim_tabela">Total</th>
+                            <th class="fim_tabela">R$ 12.909,99</th>
+                        </tr>           
+                    </tbody>
+                </table>
             </div>
-            <div>    
-                <button class="adicionar" > Adicionar transação </button>
-            </div>
-        </form>
-        <hr width="92.2%" >
-        <div class="extract" >
-            Extrato de transações
+            <p  id="lucro" >[LUCRO]</p>
         </div>
-        <div>
-            <p> Mercadoria </p>
-        </div>
-        <div>
-            <p>Valor</p>
-        </div>
-        <hr width="92.2%" >        
-        <p>+Lorem ipsum dolor sit amet consectetur</p>
-    </div>
-    <div>
-        <p>R$ 12.999,99</p>
-    </div>
-    <hr width="92.2%" >
-    <div>
-        <P>- Quis nostrud exercitatio</P>
-    </div>
-    <div>
-        <P>R$ 99,99</P>
-    </div>
-    <div>
-        <P>+ Lorem ipsum</P>
-    </div>
-    <div>
-        <P>R$ 9,99</P>
-    </div>
-    <hr width="92.2%" >
-    <hr size="2" width="92.2%" color="black" >
-    <div>
-        <P>Total</P>
-    </div>
-    <div>
-        <P>R$ 12.909,99</P>
-    </div>
-    <p>[LUCRO]</p>
-</body>
+    </body>
 </html>

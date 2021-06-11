@@ -72,8 +72,8 @@ body{
 }
 
 .transacao {
-    display: flexbox;
-    padding: 20px;
+
+     padding: 20px;
 }
 
 #primeiro_botao {
@@ -121,4 +121,45 @@ body{
         height: 28px;
         border: 1px solid #979797;
         background-color: #333;
+}
+
+.extract{
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+}
+
+.tabela{
+    padding: 20px 20px 0px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-top: solid 1px #ddd;
+    font-weight: 400;
+}
+
+.fim_tabela{
+    border-top: double;
+    font-weight: 700;
+    padding: 8px 8px 0px;
+}
+
+.topo{
+    border: none;
+    font-weight: 700;
+    
+}
+
+#lucro{
+    text-align: right;
+    padding-right: 37px;
+    margin: unset;
+    font-size: 10px;
 }
