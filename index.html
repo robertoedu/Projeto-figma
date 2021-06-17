@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -10,15 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Financeiro</title>
 </head>
+
 <body>
     <div class="control">
         <div class="elipse">
-            <img src="./Ellipse 13.png" >
+            <img src="./Ellipse 13.png">
         </div>
-        <span>    
+        <span>
             <p>Controle financeiro</p>
         </span>
-        <div class="aba" >
+        <div class="aba">
             <div class="menu">
                 <div></div>
                 <div></div>
@@ -29,73 +31,76 @@
                     <li>X</li>
                     <li>Cadastro de transações</li>
                     <li>Limpar dados</li>
-                <li>Salvar no servidor</li>
-            </ul>
-        </div>
+                    <li>Salvar no servidor</li>
+                </ul>
+            </div>
         </div>
     </div>
-        <div class="hero" >
-            <div class="formbox" >
-                <div class="novat">
-                    <label for="Nova" id="tablet">Nova transação</label>
+    <div class="hero">
+        <div class="formbox">
+            <div class="novat">
+                <label for="Nova" id="tablet">Nova transação</label>
+            </div>
+            <form class="transacao">
+                <div class="lcompra">
+                    <label for="tipo" class="tt">Tipo de transação</label>
+                    <select name="escolha" id="primeiro_botao">
+                        <option value="compra">Compra</option>
+                        <option value="venda">Venda</option>
+                    </select>
                 </div>
-                <form class="transacao" >
-                    <div class="lcompra">
-                        <label for="tipo" class="tt" >Tipo de transação</label>
-                        <select name="escolha" id="primeiro_botao">
-                            <option value="compra">Compra</option>
-                            <option value="venda">Venda</option>
-                        </select>
-                    </div>
-                    <div class="lmercadoria" >
-                        <label for="nome_m" class="NM">Nome da Mercadoria</label>
-                        <input type="text" placeholder="Input" class="mercadoria" >
-                    </div>
-                    <div class="lvalor" >
-                        <label for="valor-m" class="value" >Valor</label>
-                        <input type="number" placeholder="R$ 0,00" min="0" class="VM"/>
-                    </div>
-                    <div class="" >    
-                        <button class="adicionar" > Adicionar transação </button>
-                    </div>
-                </form>
-            </div>
-                <hr class="linha1" width="92.2%" >
-            <div class="extract" >
-                <p>Extrato de transações</p>
-            </div>
-            <div class="tabela" >
-                <table >
-                    <thead>
-                        <th class="topo" ></th>
-                        <th class="topo" >Mercadoria</th>
-                        <th class="topo" >Valor</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>+</td>
-                            <td>Lorem ipsum dolor sit amet consectur</td>
-                            <td> R$ 12.999,99</td>
-                        </tr>
-                        <tr>
-                            <td>-</td>
-                            <td> Quis nostrud exercitation</td>
-                            <td>R$ 99,99</td>
-                        </tr>                
-                        <tr>
-                            <td>+</td>
-                            <td> Lorem impsum</td>
-                            <td>R$ 9,99</td>
-                        </tr>
-                        <tr>
-                            <td class="fim_tabela" ></td>
-                            <td class="fim_tabela">Total</td>
-                            <td class="fim_tabela">R$ 12.909,99</td>
-                        </tr>           
-                    </tbody>
-                </table>
-            </div>
-            <p  id="lucro" >[LUCRO]</p>
+                <div class="lmercadoria">
+                    <label for="nome_m" class="NM">Nome da Mercadoria</label>
+                    <input type="text" placeholder="Input" class="mercadoria">
+                </div>
+                <div class="lvalor">
+                    <label for="valor-m" class="value">Valor</label>
+                    <input type="number" placeholder="R$ 0,00" min="0" class="VM" />
+                </div>
+                <div>
+                    <button class="adicionar"> Adicionar transação </button>
+                </div>
+            </form>
         </div>
-    </body>
+        <hr class="linha1" width="92.2%">
+        <div class="extract">
+            <p>Extrato de transações</p>
+        </div>
+        <div class="tabela">
+            <table>
+                <thead>
+                    <th class="topo"></th>
+                    <th class="topo">Mercadoria</th>
+                    <th class="topo" id="vtf">Valor</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>+</td>
+                        <td>Lorem ipsum dolor sit amet consectur</td>
+                        <td class="vt"> R$ 12.999,99</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td> Quis nostrud exercitation</td>
+                        <td class="vt">R$ 99,99</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td> Lorem impsum</td>
+                        <td class="vt">R$ 9,99</td>
+                    </tr>
+                    <tr>
+                        <td class="fim_tabela"></td>
+                        <td class="fim_tabela">Total</td>
+                        <td class="fim_tabela" id="vtf">R$ 12.909,99</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="vt" id="lc">[LUCRO]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
 </html>
