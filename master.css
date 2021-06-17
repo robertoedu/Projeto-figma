@@ -2,6 +2,9 @@ body{
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
+
+/*Resposividade mobile*/
+
 .control {
     background-color: #e0e0e0;
     height: 60px;
@@ -177,7 +180,7 @@ th, td {
     padding-right: 20px;
 }
 
-/* como comecei pelo mobile usar o min no @media and srceem (min-widht px) */
+/* responsividade tablet*/
 
 @media screen and (min-width: 712px){
     .control{
@@ -246,8 +249,51 @@ th, td {
 
 }
 
-@media screen and (min-width: 1100px) {
-    
-    
-}
+/*Desktop*/
 
+@media screen and (min-width: 1100px) {
+    .aba ul{
+        display: flex;
+        flex-direction: row;
+        width: 507px;
+        height: 4px;
+        align-items: center;
+        background-color: white;
+        color: #333;
+        position: relative;
+        white-space: nowrap;
+        font-weight: 600;
+        border: 1px solid;
+    }
+
+    .aba ul li{
+        border-left: 1px solid #333;
+        
+    } 
+
+    .aba ul li:hover{
+        
+    }
+
+    .aba ul li:nth-child(2){
+       border: 0; 
+    }
+
+    .aba ul li:nth-child(1) {
+        display: none;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    span{
+        flex: auto;
+        padding-left: 15px;
+    }
+    
+    .hero{
+        display: flex;
+    }
+
+}
