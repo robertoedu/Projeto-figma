@@ -257,8 +257,8 @@ th, td {
     .aba ul{
         display: flex;
         flex-direction: row;
-        width: 507px;
-        height: 4px;
+        width: 500px;
+        height: 0px;
         align-items: center;
         background-color: white;
         color: #333;
@@ -275,6 +275,7 @@ th, td {
 
     .aba ul li:nth-child(2){
        border: 0; 
+       padding-left: 18px;
     }
 
     .aba ul li:nth-child(1) {
