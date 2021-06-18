@@ -50,6 +50,8 @@ body{
     z-index: 2;
 }
 
+
+
 .aba ul li:nth-child(1) {
     text-align: left;
 }
@@ -271,10 +273,6 @@ th, td {
         
     } 
 
-    .aba ul li:hover{
-        
-    }
-
     .aba ul li:nth-child(2){
        border: 0; 
     }
@@ -294,6 +292,45 @@ th, td {
     
     .hero{
         display: flex;
+    }
+
+    .formbox{
+        height: 327px;
+        width: 400px;
+        margin-left: 19px;
+    }
+
+    .transacao{
+        display: unset;
+    }
+
+    .lcompra{
+        width: 97%;
+        padding: 0px 10px
+    }
+
+    .lmercadoria{
+        width: 97%;
+        padding: 0px 10px;
+    }
+
+    .lvalor{
+        width: 97%;
+        padding: 0px 10px;
+    }
+
+    .btadd{
+        padding-top: 15px;
+    }
+
+    .adicionar{
+        width: 96%;
+        margin: 9px;
+
+    }
+
+    .tablecomp{
+        width: 74%;
     }
 
 }
