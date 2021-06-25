@@ -12,6 +12,10 @@ body{
     width: 100%;
 }
 
+.botoesdesk{
+    display: none;
+}
+
 .head{
     width: 100%;
     display: flex;
@@ -273,30 +277,28 @@ th, td {
     }
 
     .aba ul{
-        display: flex;
-        flex-direction: row;
-        width: 500px;
-        height: 0px;
-        align-items: center;
-        background-color: white;
-        color: #333;
-        position: relative;
-        white-space: nowrap;
-        font-weight: 600;
-        border: 1px solid;
-    }
-
-    .aba ul li{
-        border-left: 1px solid #333;
-    } 
-
-    .aba ul li:nth-child(2){
-       border: 0; 
-       padding-left: 18px;
-    }
-
-    .aba ul li:nth-child(1) {
         display: none;
+    }
+
+    .botoesdesk { 
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        align-items: center;
+    }
+
+    .botoesdesk a, .pipe{
+        padding: 8px;
+        text-decoration: none;
+        color: #333;
+        transition:  0.2s;
+        font-weight: 600;
+    }
+
+    }
+
+    .botoesdesk a:hover{
+        background-color: #888;
     }
 
     .menu{
@@ -351,4 +353,3 @@ th, td {
         width: 74%;
     }
 
-}
