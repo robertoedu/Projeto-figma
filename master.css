@@ -12,6 +12,10 @@ body{
     width: 100%;
 }
 
+.botoesdesk{
+    display: none;
+}
+
 .head{
     width: 100%;
     display: flex;
@@ -273,17 +277,26 @@ th, td {
     }
 
     .aba ul{
+        display: none;
+    }
+
+    .botoesdesk { 
         display: flex;
-        flex-direction: row;
-        width: 500px;
-        height: 0px;
-        align-items: center;
-        background-color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    align-items: center;
+    }
+
+    .botoesdesk a, .pipe{
+        padding: 8px;
+        text-decoration: none;
         color: #333;
         position: relative;
         white-space: nowrap;
+        transition:  0.2s;
         font-weight: 600;
-        border: 1px solid;
     }
 
     .aba ul li{
@@ -297,6 +310,10 @@ th, td {
 
     .aba ul li:nth-child(1) {
         display: none;
+    }
+
+    .botoesdesk a:hover{
+        background-color: #888;
     }
 
     .menu{
@@ -348,7 +365,5 @@ th, td {
     }
 
     .tablecomp{
-        width: 74%;
+        width: 74%;}
     }
-
-}
