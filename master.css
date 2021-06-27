@@ -299,17 +299,9 @@ th, td {
         font-weight: 600;
     }
 
-    .aba ul li{
-        border-left: 1px solid #333;
-    } 
 
-    .aba ul li:nth-child(2){
-       border: 0; 
-       padding-left: 18px;
-    }
-
-    .aba ul li:nth-child(1) {
-        display: none;
+    .botoesdesk a:hover{
+        background-color: #888;
     }
 
     .botoesdesk a:hover{
@@ -365,5 +357,6 @@ th, td {
     }
 
     .tablecomp{
-        width: 74%;}
-    }
+        width: 74%;
+    } 
+}
