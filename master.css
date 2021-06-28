@@ -107,7 +107,7 @@ body{
     width: 98.40%;
     border-radius: 4px;
     color: #888;
-    margin-top: 7px;
+    margin-top: 8px;
     height: 28px;
     border: 1px solid #979797;
 }
@@ -121,13 +121,13 @@ body{
     width: 97%;
     border-radius: 4px;
     color: #888;
-    margin-top: 7px;
+    margin-top: 8px;
     height: 25px;
     border: 1px solid #979797;
 }
 
 .value {
-    position: absolute;
+    display: flex;
     margin-top: 20.74px;
 }
 
@@ -135,7 +135,7 @@ body{
     width: 97%;
     border-radius: 4px;
     color: #888;
-    margin-top: 43px;
+    margin-top: 8px;
     height: 25px;
     border: 1px solid #979797;
 }
