@@ -4,28 +4,32 @@ function Validarform(){
     var selecione = document.getElementById("primeiro_botao").value;
     console.log("Selecionado", selecione);
 
-    if(selecione == ""){
-        let acionado =document.getElementById("celecalert").value;
-        celecalert.innerHTML = "*Selecione a modalidade desejada!";
-        console.log("Não selecionado", celecalert)
-    }
+    var valor = document.getElementById("Vm").value;
+    console.log("Valor", valor);
 
     var nomeM = document.getElementById("Nm").value;
     console.log("Nome", nomeM);
 
-    if (nomeM == ""){
-        let nomevazio = document.getElementById("nomealert").value;
-        nomealert.innerHTML = "*Preencha com o nome da mercadoria!";
-        console.log("Sem nome", nomealert );
+    var exite_erro = false;
+
+    if(selecione == ""){
+        exite_erro = true;
+        celecalert.innerHTML = "*Selecione a modalidade desejada!";
     }
 
-    var valor = document.getElementById("Vm").value;
-    console.log("Valor", valor);
+    if (nomeM == ""){
+        exite_erro = true;
+        nomealert.innerHTML = "*Preencha com o nome da mercadoria!";
+    }
 
     if(valor == ""){
-        var valor = document.getElementById("valoret")
-            let valor_nulo =document.getElementById("valoret").value;
-            valoret.innerHTML = "*Adicione o valor da transição!"
-            console.log("Valor indefinido", valoret);
-        }
+        exite_erro = true;
+        valoret.innerHTML = "*Adicione o valor da transição!";
+    }
+
+    if(!exite_erro){
+        localStorage.setItem("Ação desejada",selecione);
+        localStorage.setItem("Nome da mercadoria",nomeM);
+        localStorage.setItem("Valor",valor);
+    }
 }
