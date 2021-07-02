@@ -103,7 +103,7 @@ body{
      padding: 20px;
 }
 
-#primeiro_botao {
+#escolha {
     width: 98.40%;
     border-radius: 4px;
     color: #888;
@@ -149,7 +149,9 @@ body{
         border: 1px solid #979797;
         background-color: #333;
 }
-
+.linha1{
+    width:92.2%;
+}
 .extract{
     font-weight: 700;
     text-align: center;

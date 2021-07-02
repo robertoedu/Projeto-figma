@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -9,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./master.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="script.js" ></script>
     <title>Controle Financeiro</title>
 </head>
 
@@ -50,64 +50,49 @@
             <div class="novat">
                 <label for="Nova" id="tablet">Nova transação</label>
             </div>
-            <form class="transacao">
+            <form class="transacao" onsubmit="Validarform(event)" >
                 <div class="lcompra">
-                    <label for="tipo" class="tt">Tipo de transação</label>
+                    <label for="escolha" class="tt">Tipo de transação</label>
                     <div id="celecalert" style="color: red;" ></div>
-                    <select name="escolha" id="primeiro_botao">
+                    <select name="escolha" id="escolha">
                         <option value>--Selecione--</option>
                         <option value="compra">Compra</option>
                         <option value="venda">Venda</option>
                     </select>
                 </div>
                 <div class="lmercadoria">
-                    <label for="nome_m" class="NM">Nome da Mercadoria</label>
+                    <label for="nome"  class="NM">Nome</label>
                     <div id="nomealert" style="color: red;" ></div>
-                    <input type="text" placeholder="Input" name="nomemerc" class="mercadoria" id="Nm">
+                    <input type="text" placeholder="Input" name="nome" class="mercadoria" id="nome">
                    
                 </div>
                 <div class="lvalor">
-                    <label for="valor-m" class="value">Valor</label>
+                    <label for="valor" class="value">Valor</label>
                     <div id="valoret" style="color: red;" ></div>
-                    <input type="number" name="valormec"  placeholder="R$ 0,00" min="0" class="VM" id="Vm" />
+                    <input type="number" name="valor"  placeholder="R$ 0,00" min="0" class="VM" id="valor">
                 </div>
                 <div class="btadd">
-                    <button type="button" class="adicionar" onclick="Validarform()"> Adicionar transação </button>
+                    <button type="submit" class="adicionar" > Adicionar transação </button>
                 </div>
             </form>
         </div>
-        <hr class="linha1" width="92.2%">
+        <hr class="linha1" >
         <div class="tablecomp" >
             <div class="extract">
                 <p>Extrato de transações</p>
             </div>
-            <div class="tabela">
+            <div class="tabela" id="table">
                 <table>
                     <thead>
                         <th class="topo"></th>
                         <th class="topo">Mercadoria</th>
                         <th class="topo" id="vtf">Valor</th>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>+</td>
-                            <td>Lorem ipsum dolor sit amet consectur</td>
-                            <td class="vt"> R$ 12.999,99</td>
-                        </tr>
-                        <tr>
-                            <td>-</td>
-                            <td> Quis nostrud exercitation</td>
-                            <td class="vt">R$ 99,99</td>
-                        </tr>
-                        <tr>
-                            <td>+</td>
-                            <td> Lorem impsum</td>
-                            <td class="vt">R$ 9,99</td>
-                        </tr>
-                        <tr>
-                            <td class="fim_tabela"></td>
-                            <td class="fim_tabela">Total</td>
-                            <td class="fim_tabela" id="vtf">R$ 12.909,99</td>
+                    <tbody id="tjs" >
+                        <tr >
+                            <td id="sele" ></td>
+                            <td id="nomer"></td>
+                            <td class="vt" id="vlm"> R$</td>
                         </tr>
                         <tr>
                             <td colspan="3" class="vt" id="lc">[LUCRO]</td>
@@ -117,6 +102,8 @@
             </div>
         </div>
     </div>
+    <script>
+        listatransacao();
+    </script>
 </body>
-<script type="text/javascript" src="script.js" ></script>
 </html>

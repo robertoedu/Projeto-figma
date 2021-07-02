@@ -1,23 +1,26 @@
-function Validarform(){
+var transacao = []
+
+function Validarform(e){
+    e.preventDefault();
     console.log("Botão clicado");
    
-    var selecione = document.getElementById("primeiro_botao").value;
-    console.log("Selecionado", selecione);
+    var escolha = document.getElementById("escolha").value;
+    console.log("escolha", escolha);
 
-    var valor = document.getElementById("Vm").value;
-    console.log("Valor", valor);
+    var valor = document.getElementById("valor").value;
+    console.log("valor", valor);
 
-    var nomeM = document.getElementById("Nm").value;
-    console.log("Nome", nomeM);
+    var nome = document.getElementById("nome").value;
+    console.log("nome", nome);
 
     var exite_erro = false;
 
-    if(selecione == ""){
+    if(escolha == ""){
         exite_erro = true;
         celecalert.innerHTML = "*Selecione a modalidade desejada!";
     }
 
-    if (nomeM == ""){
+    if (nome == ""){
         exite_erro = true;
         nomealert.innerHTML = "*Preencha com o nome da mercadoria!";
     }
@@ -27,9 +30,30 @@ function Validarform(){
         valoret.innerHTML = "*Adicione o valor da transição!";
     }
 
+    if(transacao == null){
+        transacao=[]
+    }
+
     if(!exite_erro){
-        localStorage.setItem("Ação desejada",selecione);
-        localStorage.setItem("Nome da mercadoria",nomeM);
-        localStorage.setItem("Valor",valor);
+        transacao.push({nome: nome, valor: valor, escolha: escolha})
+        localStorage.setItem("transacao",JSON.stringify(transacao));
+        listatransacao();
+       
     }
 }
+
+function listatransacao(){
+        transacao = JSON.parse(localStorage.getItem('transacao'))
+        if(transacao != null){
+            document.querySelector('#tjs').innerHTML = transacao.map((tra)=>{
+                return (
+                    ` <tr >
+                <td id="sele" >+</td>
+                <td id="nomer">`+tra.nome+`</td>
+                <td class="vt" id="vlm"> R$ `+tra.valor+`</td>
+            </tr>`
+            )
+            }).join('');
+        }
+}
+
