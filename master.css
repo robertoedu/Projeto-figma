@@ -174,10 +174,24 @@ th, td {
     font-weight: 400;
 }
 
+#sele{
+    width: 75px;
+}
+
 .fim_tabela{
     border-top: double #979797; 
     font-weight: 700;
     padding: 8px 8px 0px;
+}
+
+#rs{
+    text-align: end;
+    display: block;
+    padding-right: 16px;
+}
+
+#vlm{
+    width: 100%;
 }
 
 #vtf{

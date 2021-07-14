@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="./master.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="script.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <title>Controle Financeiro</title>
 </head>
 
-<body>
+<body>     
     <div class="control">
+        <!--Parte do cabeçalho do mobile até o tablet--> 
         <div class="head" >
             <div class="elipse">
                 <img src="./Ellipse 13.png">
@@ -21,21 +24,21 @@
             <span>
                 <p>Controle financeiro</p>
             </span>
-            <div class="botoesdesk" >
+            <div class="botoesdesk" > <!--Botões da parte desktop, eles ficam invisiveis até a tela atingir a medida da tela desktop-->
                 <div class="deskbt" id="ctdesk" ><a href="" >Cadastro de transações</a></div>
                 <span class="pipe" >|</span>
                 <div class="deskbt"><a href="" >Limpar dados</a></div>
                 <span class="pipe">|</span>
                 <div class="deskbt" ><a href="" >Salvar no servidor</a></div>
             </div>
-            <div class="aba">
+            <div class="aba"> <!--aba somente disponível nas partes mobile e tablet, após isso ela some pois da espaço a botões para o desktop-->
                 <div class="menu">
                     <div></div>
                     <div></div>
                     <div></div>
             </div>
             <div>
-                <ul>
+                <ul> <!--Lista de clique para versões pequenas/portateis-->
                     <li>X</li>
                     <li>Cadastro de transações</li>
                     <li>Limpar dados</li>
@@ -45,7 +48,7 @@
         </div>
     </div>
 </div>
-    <div class="hero">
+    <div class="hero"> <!--Inicio do corpo tanto em portateis como desktop-->
         <div class="formbox">
             <div class="novat">
                 <label for="Nova" id="tablet">Nova transação</label>
@@ -54,22 +57,22 @@
                 <div class="lcompra">
                     <label for="escolha" class="tt">Tipo de transação</label>
                     <div id="celecalert" style="color: red;" ></div>
-                    <select name="escolha" id="escolha">
+                    <select name="escolha" onmouseup=" celecalert.innerHTML =''" id="escolha">
                         <option value>--Selecione--</option>
-                        <option value="compra">Compra</option>
-                        <option value="venda">Venda</option>
+                        <option id="selcompra" value="-">Compra</option>
+                        <option  value="+">Venda</option>
                     </select>
                 </div>
                 <div class="lmercadoria">
                     <label for="nome"  class="NM">Nome</label>
                     <div id="nomealert" style="color: red;" ></div>
-                    <input type="text" placeholder="Input" name="nome" class="mercadoria" id="nome">
+                    <input type="text"  onkeypress="nomealert.innerHTML =''"    placeholder="Input" name="nome" class="mercadoria" id="nome">
                    
                 </div>
                 <div class="lvalor">
                     <label for="valor" class="value">Valor</label>
                     <div id="valoret" style="color: red;" ></div>
-                    <input type="number" name="valor"  placeholder="R$ 0,00" min="0" class="VM" id="valor">
+                    <input  name="valor" maxlength="9" onkeyup="formatarMoeda()"  type="text" onkeypress=" valoret.innerHTML =''"  placeholder="R$ 0,00" class="VM" id="valor">
                 </div>
                 <div class="btadd">
                     <button type="submit" class="adicionar" > Adicionar transação </button>
@@ -79,6 +82,7 @@
         <hr class="linha1" >
         <div class="tablecomp" >
             <div class="extract">
+                <!--Parte de lista de extrato onde cada ação que é adicionada pela parte anterior vem a aparecer na tela devido ao js dinamico que deixa asssim uma lista que pode variar.-->
                 <p>Extrato de transações</p>
             </div>
             <div class="tabela" id="table">
@@ -93,15 +97,23 @@
                             <td id="sele" ></td>
                             <td id="nomer"></td>
                             <td class="vt" id="vlm"> R$</td>
+                        </tr> 
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td>Total</td>
+                            <td id="rs" >R$</td>
                         </tr>
                         <tr>
                             <td colspan="3" class="vt" id="lc">[LUCRO]</td>
                         </tr>
-                    </tbody>
+                    </tfoot>
                 </table>
             </div>
         </div>
     </div>
+    <!--Chamando a validação de formulário para ver se os campos etão corretos, essa é uma inserção de js.-->
     <script>
         listatransacao();
     </script>
