@@ -16,6 +16,7 @@ function formatarMoeda() {
 
     elemento.value = valor;
     if(valor == 'NaN') elemento.value = '';
+    if(valor == 'null') elemento.value = '';
 }
 
 // Validação de cada campo do formulário com visualização de cada item, contendo o evento para não recarregar a pafina
@@ -55,9 +56,9 @@ function Validarform(e){
         }
 
         if(escolha == "-"){
-            valor = valor *-1;
+            valor =parseFloat(valor) *-1;
         }else{
-            valor = valor *1;
+            valor =valor *1;
         }
         transacao.push({nome: nome, valor: valor, escolha: escolha});
         localStorage.setItem("transacao",JSON.stringify(transacao)); 
@@ -86,7 +87,7 @@ function listatransacao(){
             </tr>`
         }
         document.getElementById('rs').innerHTML = `
-        <td id="rs" > R$ `+ total +`</td> `;
+        <td id="rs" > R$ `+ total+`</td> `;
         
 }
 
