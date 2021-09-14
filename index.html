@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./master.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="script.js" ></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <title>Controle Financeiro</title>
 </head>
 
@@ -25,7 +23,7 @@
                 <p>Controle financeiro</p>
             </span>
             <div class="botoesdesk" > <!--Botões da parte desktop, eles ficam invisiveis até a tela atingir a medida da tela desktop-->
-                <div class="deskbt" id="ctdesk" ><a href="" >Cadastro de transações</a></div>
+                <div class="deskbt" id="ctdesk" ><a >Cadastro de transações</a></div>
                 <span class="pipe" >|</span>
                 <div class="deskbt"><a href="" >Limpar dados</a></div>
                 <span class="pipe">|</span>
@@ -72,7 +70,7 @@
                 <div class="lvalor">
                     <label for="valor" class="value">Valor</label>
                     <div id="valoret" style="color: red;" ></div>
-                    <input  name="valor" maxlength="9" onkeyup="formatarMoeda()"  type="text" onkeypress=" valoret.innerHTML =''"  placeholder="R$ 0,00" class="VM" id="valor">
+                    <input  name="valor"  onkeyup="formatarMoeda()"   onkeypress=" valoret.innerHTML =''"  placeholder="R$ 0,00" class="VM" id="valor">
                 </div>
                 <div class="btadd">
                     <button type="submit" class="adicionar" > Adicionar transação </button>
@@ -92,11 +90,13 @@
                         <th class="topo">Mercadoria</th>
                         <th class="topo" id="vtf">Valor</th>
                     </thead>
+                    <div id="nem" ></div>
                     <tbody id="tjs" >
                         <tr >
+                            
                             <td id="sele" ></td>
-                            <td id="nomer"></td>
-                            <td class="vt" id="vlm"> R$</td>
+                            <td id="nomer"> </td>
+                            <td class="vt" id="vlm">R$</td>
                         </tr> 
                     </tbody>
                     <tfoot>
@@ -106,7 +106,7 @@
                             <td id="rs" >R$</td>
                         </tr>
                         <tr>
-                            <td colspan="3" class="vt" id="lc">[LUCRO]</td>
+                            <td colspan="3" class="vt" id="lc"></td>
                         </tr>
                     </tfoot>
                 </table>
@@ -115,7 +115,8 @@
     </div>
     <!--Chamando a validação de formulário para ver se os campos etão corretos, essa é uma inserção de js.-->
     <script>
-        listatransacao(); 
+        listatransacao();
+        
     </script>
 </body>
 </html>
