@@ -1,6 +1,5 @@
 var transacao = [];
 var total = 0;
-var produtos = [];
 // Mascára monetária finalizando ela, feita com regex
 function formatarMoeda() {
     var elemento = document.getElementById('valor');
@@ -109,6 +108,7 @@ function listatransacao() {
     }
 
 }
+var produtos = [];
 
 function listaprod() {
     fetch('https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico?maxRecords=3&view=Grid%20view', {
@@ -117,7 +117,16 @@ function listaprod() {
         }
     }).then((resp) => {
         return resp.json()
-    }).then((data) =>{
+    }).then((data) => {
         produtos = data.records
+
+        document.getElementById('tjs').innerHTML = produtos.map((produto) => {
+            console.log(produto)
+            return `
+                <tr >
+                    <td id="sele" > ${produto.fields.aluno} </td>
+                </tr>
+             `;
+        }).join('')
     })
 }
